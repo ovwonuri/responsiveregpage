@@ -1,0 +1,179 @@
+/* For mobile phones: 
+ it is always good to design for mobile first*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+   font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.flex-container{
+    width: 100%;
+    margin:auto; /* equal spacing left and right*/
+    /*display: flex;*/
+    /*display: -webkit-flex;*/
+    justify-content: center;
+    align-items: center;
+    background-image: url("images/bg-intro-mobile.png");
+    background-color: pink;
+    padding: 1em;
+    flex-direction: column;
+}
+.flex-item{
+    padding: 1em;
+    flex: 1;
+}
+.learn{
+    padding-top: 3em;
+    text-align: center;
+    color:white;
+}
+.learn h1{
+    margin-bottom: 5%;
+}
+.reg-form{
+    padding-top: 1em;
+}
+.info{
+    background-color: purple;
+    margin-bottom: 1em;
+    padding: 0.5em;
+    border-radius: 2%;
+    color: white;
+    text-align: center;
+    /*box-shadow: horizontal vertical blurEffect spreadRadius color;*/
+    box-shadow: 0 1px 1px 2px lightblue;
+}
+.reg{
+    background-color: white;
+    padding: 2em;
+    border-radius: 2%;
+    /*box-shadow: horizontal vertical blurEffect spreadRadius color;*/
+    box-shadow: 0 1px 1px 2px lightblue;
+}
+.agreement{
+    font-size: 0.5em;
+    text-align: center;
+}
+.agreement a{
+    text-decoration: none;
+    color: red;
+    font-weight: 400;
+}
+/**
+* ! style rules for form section
+**/
+form {
+    display: flex;
+    flex-direction: column;
+  }
+form div input {
+    width: 98%;
+    height: 40px;
+    border-radius: 8px;
+    outline: none;
+    border: 2px solid #c4c4c4;
+    padding: 0 30px;/*top & bottom,right and left*/
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+form div {
+    position: relative;
+    margin-bottom: 10px;
+}
+  
+input:focus {
+    border: 2px solid #f2796e;
+}
+
+/**
+* ! style rules for form icons
+**/
+form div i {
+    position: absolute;
+    padding: 10px 20px 10px 10px; /*TRBL*/
+}
+.failure-icon,
+.error {
+  color: red;
+  
+}
+
+.success-icon {
+  color: green;
+}
+
+.error {
+  font-size: 14.5px;
+  margin-top: 2px;
+  float: right;
+  font-style: italic;
+  margin-right: 10px;
+}
+.success-icon,
+.failure-icon {
+  right: 0;
+  opacity: 0;
+}
+
+
+
+/* Set a style for the submit button */
+.registerbtn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 98%;
+    opacity: 0.9;
+    border-radius: 8px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.1s ease;
+  }
+  
+.registerbtn:hover {
+    opacity: 1;
+}
+
+ 
+/* MEDIA QUERIES */
+@media only screen and (min-width: 550px) {
+    /* For tablets: */
+    body {
+        background-color: white;
+        padding-top: 3%;
+    }
+    .flex-container{
+         width: 80%;
+         margin:auto; /* equal spacing left and right*/
+         display: flex;
+         flex-direction: row;
+         background-image: url("images/bg-intro-mobile.png");
+    }
+    form div input {
+        width: 96%;
+    }
+     
+    
+}
+@media only screen and (min-width: 768px)  {
+    /* For Desktop: */
+    body {
+        background-color: black;
+        padding-top: 5%;
+     }
+     .flex-container{
+         width: 60%;
+         margin:auto; /* equal spacing left and right*/
+         display: flex;
+         flex-direction: row;
+         background-image: url("images/bg-intro-desktop.png");
+     }
+     .learn{
+        text-align: left;
+    }
+    
+}
+/*
